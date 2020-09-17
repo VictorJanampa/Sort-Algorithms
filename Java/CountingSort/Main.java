@@ -30,7 +30,7 @@ class CountingSort {
 class Main {
   public static void main(String args[]) {
     CountingSort ob = new CountingSort();
-    int arr[] = { 1, 2, 8};
+    int arr[] = { 1, 2, 7, 7, 1, 1, 5, 8, 9};
     ob.sort(arr);
 
     System.out.println("Sorted array is ");
