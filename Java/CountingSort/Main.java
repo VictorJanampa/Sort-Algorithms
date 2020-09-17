@@ -2,7 +2,7 @@ class CountingSort {
   void sort(int arr[]) {
     int n = arr.length;
     int output[] = new int[n];
-    int count[] = new int[n+1];
+    int count[] = new int[10];
     for (int i = 0; i < n; ++i)
       count[i] = 0;
 
