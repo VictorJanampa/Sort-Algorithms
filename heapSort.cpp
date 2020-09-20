@@ -1,7 +1,7 @@
 #include <iostream>
   using namespace std;
   
-  void monticulo(int arr[], int n, int i) {
+  void heapify(int arr[], int n, int i) {
     
     int max = i;
     int izq = 2 * i + 1;
@@ -16,7 +16,7 @@
     
     if (max != i) {
       swap(arr[i], arr[max]);
-      monticulo(arr, n, max);
+      heapify(arr, n, max);
     }
   }
   
@@ -24,12 +24,12 @@
   void heapSort(int arr[], int n) {
     
     for (int i = n / 2 - 1; i >= 0; i--)
-      monticulo(arr, n, i);
+      heapify(arr, n, i);
   
     
     for (int i = n - 1; i >= 0; i--) {
       swap(arr[0], arr[i]);
-      monticulo(arr, i, 0);
+      heapify(arr, i, 0);
     }
   }
   
