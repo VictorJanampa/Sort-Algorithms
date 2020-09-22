@@ -48,9 +48,3 @@ if __name__=='__main__':
         print("tiempo de ejecucion: ",tiempo_ejecucion)
     f.close()
         
-        
-    #print("lista dada: ",end="\n")
-    #crear_arreglo(A,1000000)
-    #imprimir(A)
-    #quicksort(A,0,len(A)-1)
-    #imprimir(A)
