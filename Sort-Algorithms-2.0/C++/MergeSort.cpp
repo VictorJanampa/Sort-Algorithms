@@ -3,6 +3,8 @@
 #include<stdio.h> 
 using namespace std;
 
+int A[100000];
+
 void merge(int arr[], int l, int m, int r) 
 { 
     int i, j, k; 
@@ -69,12 +71,18 @@ void printArray(int A[], int size)
     cout<<endl; 
 } 
   
+int main()
+{
+    int n;
+    while (cin>>n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            cin>>A[i];
+        }
+        mergeSort(A,0,n-1);
+        printArray(A,n);
+    }
+    return 0;
+}
 
-int main() 
-{ 
-    int arr[] = {12, 11, 13, 5, 6, 7};  
-    printArray(arr, 6); 
-    mergeSort(arr, 0, 6 - 1);  
-    printArray(arr, 6); 
-    return 0; 
-} 
