@@ -1,22 +1,10 @@
 #include<iostream>
-#include<iomanip>
+#include<time.h>
+#include<fstream>
+#include<stdlib.h>
 using namespace std;
 
-void crear_arreglo(int v[], int n){
-    for(int i=0;i<n;i++){
-        cout<<"ingrese un numero: ";
-        cin>>v[i];
-    }
-}
-
-void mostrar_arreglo(int v[], int n){
-    for(int i=0;i<n;i++){
-        cout<<v[i]<<setw(3);
-    }
-    cout<<endl;
-}
-
-void BubbleSort(int v[], int n){
+void BubbleSort(int *v, int n){
     for(int i=0;i<n;i++){
         for(int j=0;j<n-1;j++){
             if(v[j]>v[j+1]){
@@ -28,16 +16,34 @@ void BubbleSort(int v[], int n){
     }
 }
 
+void crear_arreglo(int *v, int n){
+    int c;
+    srand(time(NULL));
+
+    for(c=0;c<=n;c++){
+        v[c]=rand()%100000;
+
+    }
+}
+
 int main()
 {
-    int v[30],n;
-    cout<<"Numero de elementos del vector: "<<endl;
-    cin>>n;
-    crear_arreglo(v,n);
-    mostrar_arreglo(v,n);
-    
-    BubbleSort(v,n);
-    cout<<"El arreglo ordenado es: "<<endl;
-    mostrar_arreglo(v,n);
+    unsigned t0,t1;
+    double time;
+    int *v=new int[100000];
+    ofstream archivo;
+    archivo.open("tiempos_bubble_c.txt",ios::out);
+    for(int i=10000;i<=100000;i+=10000){
+        crear_arreglo(v,i);
+        t0=clock();
+        BubbleSort(v,i-1);
+        t1=clock();
+        time=(double(t1-t0)/CLOCKS_PER_SEC);
+        cout<<"Tiempo de ejecucion: "<<time<<endl;
+        archivo<<time<<endl;
+    }
+
+    archivo.close();
+    delete[] v;
     return 0;
 }
