@@ -24,27 +24,27 @@
 
 ### Bubblesort
 
-![img](images/bubble.png)
+![img](images/bubble1.png)
 
 ### InsertSort
 
-![img](images/insert.png)
+![img](images/insert1.png)
 
 ### SelectionSort
 
-![img](images/selection.png)
+![img](images/selection1.png)
 
 ### MergeSort
 
-![img](images/merge.png)
+![img](images/merge1.png)
 
 ### QuickSort
 
-![img](images/quick.png)
+![img](images/quick1.png)
 
 ### HeapSort
 
-![img](images/heap.png)
+![img](images/heap1.png)
 
 ### COuntingSort
 
