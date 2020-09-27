@@ -10,15 +10,15 @@
 
 ### C++
 
-![img](images/cpp.png)
+![img](images/cpp2.png)
 
 ### Python
 
-![img](images/python.png)
+![img](images/python2.png)
 
 ### Java
 
-![img](images/java.png)
+![img](images/java2.png)
 
 ## Gráficas por algoritmo
 
@@ -36,19 +36,19 @@
 
 ### MergeSort
 
-![img](images/merge1.png)
+![img](images/merge2.png)
 
 ### QuickSort
 
-![img](images/quick1.png)
+![img](images/quick2.png)
 
 ### HeapSort
 
-![img](images/heap1.png)
+![img](images/heap2.png)
 
-### COuntingSort
+### CountingSort
 
-![img](images/counting.png)
+![img](images/count2.png)
 
 
 
